@@ -2,7 +2,8 @@
 local serverName = GetCVar("realmName")
 local serverNumber = serverName:match("x4") and 33 or
                      serverName:match("x5") and 57 or
-                     serverName:match("x2") and 9
+                     serverName:match("x2") and 9 or
+                     serverName:match("x1") and 42
 
 
 local armoryButton = CreateFrame("Button","armoryButton",UIParent,"UIPanelButtonTemplate") --создание фрейма кнопки
