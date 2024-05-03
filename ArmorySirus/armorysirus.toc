@@ -1,7 +1,7 @@
 ﻿## Interface: 30300
-## Title: Armory Sirus v7
+## Title: Armory Sirus v9
 ## Author: Belikoff
-## Version: 7
+## Version: 9
 ## Notes: thx: Челебосс х4, Toxa, Жила х5.
 
  
