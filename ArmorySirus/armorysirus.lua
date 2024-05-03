@@ -1,8 +1,8 @@
-﻿local dbLink = "https://sirus.su/base/character"
+﻿local dbLink = "https://sirus.su/base/character/x"
 local serverName = GetCVar("realmName")
 local serverNumber = serverName:match("x1") and 1 or
                      serverName:match("x2") and 2 or
-                     serverName:match("x2") and 5
+                     serverName:match("x5") and 5
 
 
 local armoryButton = CreateFrame("Button","armoryButton",UIParent,"UIPanelButtonTemplate") --создание фрейма кнопки
@@ -29,7 +29,7 @@ local function menuButtonFunction(self)
         local dropdownFrame = _G["UIDROPDOWNMENU_INIT_MENU"]
         local targetName = dropdownFrame.name
         local targetID = tonumber(UnitGUID(targetName))
-        local armoryLink = table.concat({dbLink, "/x", serverNumber, targetID or targetName}, "/")
+        local armoryLink = table.concat({dbLink, serverNumber, targetID or targetName}, "/")
         armoryButton:Show()
         armoryEditBox:Show()
         armoryEditBox:SetText(armoryLink)
