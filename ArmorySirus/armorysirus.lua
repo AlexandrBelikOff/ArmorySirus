@@ -1,4 +1,5 @@
-﻿local dbLink = "https://sirus.su/base/character/x"
+local dbLink = "https://sirus.su/base/character/x"
+local dbsl = "/"
 local serverName = GetCVar("realmName")
 local serverNumber = serverName:match("x1") and 1 or
                      serverName:match("x2") and 2 or
@@ -29,7 +30,7 @@ local function menuButtonFunction(self)
         local dropdownFrame = _G["UIDROPDOWNMENU_INIT_MENU"]
         local targetName = dropdownFrame.name
         local targetID = tonumber(UnitGUID(targetName))
-        local armoryLink = table.concat({dbLink, serverNumber, targetID or targetName}, "/")
+        local armoryLink = table.concat({dbLink, serverNumber, dbsl, targetID or targetName})
         armoryButton:Show()
         armoryEditBox:Show()
         armoryEditBox:SetText(armoryLink)
